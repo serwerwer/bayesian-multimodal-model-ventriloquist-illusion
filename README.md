@@ -8,6 +8,8 @@
 
 **Original repository (full code):** [MiloszHoleksa/Bayesian-Analysis](https://github.com/MiloszHoleksa/Bayesian-Analysis). This repo is for a portfolio purposes.
 
+_**Note:** sorry for printing the whole dataset at the beginning of .ipynb file :( I guess we have all been there._
+
 ---
 
 ## What is this project about?
@@ -136,7 +138,6 @@ Interpretation:
 
 A Bayesian model that explicitly represents **individual differences** provides a better account of the ventriloquist after-effect than a pooled regression. This supports the idea (aligned with Predictive Processing) that people differ in their internal priors / receptivity in multimodal perception.
 
-**Note:** sorry for printing the whole dataset at the beginning of .ipynb file :( I guess we have all been there.
 ---
 
 ## Limitations & possible extensions
