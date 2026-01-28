@@ -46,9 +46,15 @@ $$
 
 Priors:
 
-- \(\alpha \sim \mathcal{N}(0,1)\)
-- \(\beta \sim \mathcal{N}(0,1)\)
-- \(\sigma \sim \text{Exponential}(1)\)
+- $$
+  \alpha \sim \mathcal{N}(0,1)
+  $$
+- $$
+  \beta \sim \mathcal{N}(0,1)
+  $$
+- $$
+   \sigma \sim \text{Exponential}(1)
+  $$
 
 **Interpretation:** one global relationship between AV shift and A-trial after-effect.
 
@@ -58,25 +64,23 @@ Priors:
 
 A participant-specific model that adds:
 
-- **individual intercept** (\(\alpha_i\)): initial receptivity to the after-effect
-- **trial index effect** (\(\beta_{oi}\)): change in receptivity over time (trial number)
-- **participant-specific AV coupling** (\(\beta_{si}\))
+- **individual intercept** $ \alpha_i $: initial receptivity to the after-effect
+- **trial index effect** $beta_{oi}$: change in receptivity over time (trial number)
+- **participant-specific AV coupling** $beta_{si}$
 
-\[
-Shift_A \sim \mathcal{N}(\mu,\sigma), \quad \mu = \alpha_i + \beta_{oi}\cdot obs + \beta_{si}\cdot Shift_{AV}
-\]
+$Shift_A \sim \mathcal{N}(\mu,\sigma), \quad \mu = \alpha_i + \beta_{oi}\cdot obs + \beta_{si}\cdot Shift_{AV}$
 
 Priors:
 
-- \(\alpha_i \sim \mathcal{N}(0,1)\)
-- \(\beta_{oi} \sim \mathcal{N}(0,1)\)
-- \(\beta_{si} \sim \mathcal{N}(0,1)\)
-- \(\sigma \sim \text{Exponential}(1)\)
+- $ \alpha_i \sim \mathcal{N}(0,1) $
+- $\beta_{oi} \sim \mathcal{N}(0,1)$
+- $\beta_{si} \sim \mathcal{N}(0,1)$
+- $\sigma \sim \text{Exponential}(1)$
 
 **Interpretation:**
 
-- \(\alpha_i\) = “starting level” of after-effect susceptibility per participant
-- \(\beta_{oi}\) = how susceptibility changes across trials (learning/adaptation / drift)
+- $\alpha_i$ = “starting level” of after-effect susceptibility per participant
+- $\beta_{oi}$ = how susceptibility changes across trials (learning/adaptation / drift)
 
 ---
 
@@ -93,8 +97,8 @@ We performed Bayesian inference for both models using PyMC, with:
 
 We evaluated three hypotheses:
 
-- **H1:** Initial individual receptivity to the after-effect varies across participants (\(\alpha_i\) differs)
-- **H2:** The rate of change of receptivity varies across participants (\(\beta_{oi}\) differs)
+- **H1:** Initial individual receptivity to the after-effect varies across participants $\alpha_i$ differs)
+- **H2:** The rate of change of receptivity varies across participants $\beta_{oi}$ differs)
 - **H3:** The Multimodal (individual-differences) model predicts better than the Baseline model
 
 We assess differences using posterior distributions and 95% HDIs (rather than frequentist tests).
@@ -105,15 +109,15 @@ We assess differences using posterior distributions and 95% HDIs (rather than fr
 
 ### Baseline model posterior (pooled)
 
-- \(\alpha\) mean = **0.174**, 95% HDI **(-0.395, 0.805)**
-- \(\beta\) mean = **0.135**, 95% HDI **(0.068, 0.205)**
+- $\alpha$ mean = **0.174**, 95% HDI **(-0.395, 0.805)**
+- $\beta$ mean = **0.135**, 95% HDI **(0.068, 0.205)**
 
 ### Individual differences (Multimodal model)
 
-Across participants, the posterior intervals for \(\alpha_i\) and \(\beta_{oi}\) show **non-overlapping 95% HDIs**, indicating meaningful between-person differences in:
+Across participants, the posterior intervals for $\alpha_i$and $\\beta_{oi}$ show **non-overlapping 95% HDIs**, indicating meaningful between-person differences in:
 
-- initial susceptibility (\(\alpha_i\))
-- trial-dependent change (\(\beta_{oi}\))
+- initial susceptibility $\alpha_i$
+- trial-dependent change $\beta_{oi}$
 
 ***Note***: *Participant-level parameter plots and exact values are provided in the report appendix.*
 
@@ -143,4 +147,4 @@ A Bayesian model that explicitly represents **individual differences** provides 
 ## Limitations & possible extensions
 
 - We used **linear** relationships; effects may be non-linear.
-- Parameters like \(\alpha\) and \(\beta_{oi}\) could be influenced by unmodeled factors; adding covariates could explain more variance.
+- Parameters like $\alpha$ and $\beta_{oi}$ could be influenced by unmodeled factors; adding covariates could explain more variance.
