@@ -46,15 +46,9 @@ $$
 
 Priors:
 
-- $$
-  \alpha \sim \mathcal{N}(0,1)
-  $$
-- $$
-  \beta \sim \mathcal{N}(0,1)
-  $$
-- $$
-   \sigma \sim \text{Exponential}(1)
-  $$
+* $\alpha \sim \mathcal{N}(0,1)$
+* $\beta \sim \mathcal{N}(0,1)$
+* $\sigma \sim \text{Exponential}(1)$
 
 **Interpretation:** one global relationship between AV shift and A-trial after-effect.
 
@@ -72,7 +66,7 @@ $Shift_A \sim \mathcal{N}(\mu,\sigma), \quad \mu = \alpha_i + \beta_{oi}\cdot ob
 
 Priors:
 
-- $ \alpha_i \sim \mathcal{N}(0,1) $
+- $\alpha_i \sim \mathcal{N}(0,1)$
 - $\beta_{oi} \sim \mathcal{N}(0,1)$
 - $\beta_{si} \sim \mathcal{N}(0,1)$
 - $\sigma \sim \text{Exponential}(1)$
