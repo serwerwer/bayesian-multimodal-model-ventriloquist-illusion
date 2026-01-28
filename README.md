@@ -40,9 +40,14 @@ We compare two Bayesian models for predicting the after-effect `Shift_A`.
 
 A simple regression shared across all participants:
 
-\[
-Shift_A \sim \mathcal{N}(\mu,\sigma), \quad \mu = \alpha + \beta \cdot Shift_{AV}
-\]
+$$
+Shift_A \sim \mathcal{N}(\mu,\sigma), \quad \mu = \alpha + \beta \cdot Shift_{AV} 
+$$
+
+$$
+
+
+$$
 
 Priors:
 
